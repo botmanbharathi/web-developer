@@ -704,12 +704,6 @@ export class App extends LitElement {
 					<div id="toggle-compact" title="${this.compact ? `Disable` : `Enable`} compact layout">
 						<ws-compact-switch @toggle="${this.toggleCompact}" ?checked="true"></ws-compact-switch>
 					</div>
-					<ws-button aria-label="Open help" @click="${this.openHelp}" title="Open help">
-						<ws-icon .template="${helpIconTemplate}"></ws-icon>
-					</ws-button>
-					<ws-button aria-label="Share website" @click="${this.share}" title="Open share menu">
-						<ws-icon .template="${shareIconTemplate}"></ws-icon>
-					</ws-button>
 				</div>
 			</header>
 			<main id="collections">
@@ -719,22 +713,6 @@ export class App extends LitElement {
 				`)}
 			</main>
 			<footer id="footer">
-				<div>
-					${user != null ? html`
-						<ws-button @click="${signOut}">🔓 Sign out</ws-button>
-					` : html`
-						<ws-button @click="${signIn}">🔒 Sign in with Google</ws-button>
-					`}
-					<a href="https://github.com/andreasbm/web-skills/stargazers" target="_blank" aria-label="Become a stargazer" rel="noopener">
-						<ws-button>⭐️ Become a stargazer</ws-button>
-					</a>
-					<a href="https://twitter.com/AndreasMehlsen" target="_blank" aria-label="Open Twitter" rel="noopener">
-						<ws-button>🐦 Say hi on Twitter</ws-button>
-					</a>
-					<a href="https://www.buymeacoffee.com/AndreasMehlsen" target="_blank" aria-label="Buy coffee" rel="noopener">
-						<ws-button>☕️ Support me with a cup of coffee</ws-button>
-					</a>
-				</div>
 			</footer>
 			<ws-blur id="blur"></ws-blur>
 		`;
