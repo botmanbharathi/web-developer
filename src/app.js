@@ -689,8 +689,8 @@ export class App extends LitElement {
 				</div>
 			</div>
 			<header id="header">
-				<div>
-					<a href="https://github.com/andreasbm/web-skills" target="_blank" rel="noopener" aria-label="Open Github" title="Open Github">
+				<!--div>
+					<a href="#" target="_blank" rel="noopener" aria-label="Open Github" title="Open Github">
 						<ws-icon hoverable .template="${githubIconTemplate}"></ws-icon>
 					</a>
 					${user != null ? html`
@@ -699,7 +699,14 @@ export class App extends LitElement {
 							<span class="text">${user.displayName || user.email}</span>
 						</div>
 					` : undefined}
+				</div-->
+				<div>
+						<div id="avatar">
+							<img class="img" src="https://i.pinimg.com/originals/8a/7a/5f/8a7a5f838196730510954e3e5a8beb3e.png" />
+							<span class="text">Zeek Academy</span>
+						</div>
 				</div>
+
 				<div>
 					<div id="toggle-compact" title="${this.compact ? `Disable` : `Enable`} compact layout">
 						<ws-compact-switch @toggle="${this.toggleCompact}" ?checked="true"></ws-compact-switch>
